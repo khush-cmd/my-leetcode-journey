@@ -1,0 +1,25 @@
+// Brute Force Solution
+
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+        sort(nums.begin(),nums.end());
+        int left = 0;
+        int right = nums.size()-1;
+        int mid = left + (right - left) / 2;
+        if(mid == target){
+            return mid;
+        }
+        else if(mid < target){
+            left = mid + 1;
+        }
+        else{
+            right = mid -1;
+        }
+
+    return mid;
+    }
+};
+
+// ✅ Time Complexity = O(n²)
+// ✅ Space Complexity = O(1)
