@@ -1,0 +1,19 @@
+26. Remove Duplicates from Sorted Array
+class Solution {
+public:
+    int removeDuplicates(vector<int>& nums) {
+        int i=0;
+        for(int j=1;j<nums.size();j++){
+            if(nums[j] != nums[i]){
+                i++;
+                nums[i] = nums[j];
+            }
+        }
+        return i+1;
+    }
+};
+
+// one loop j loop is used so time complexity is O(n)
+Time Complexity = O(n)
+// no Extra array is used so space complexity is O(1)
+Space Complexity = O(1)
